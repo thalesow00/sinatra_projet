@@ -1,0 +1,14 @@
+require "sinatra/activerecord"
+require "./app"
+
+namespace :db do
+  desc "Créer la base de données"
+  task :create do
+    sh "sqlite3 db/gossip.db < db/schema.sql"
+  end
+
+  desc "Créer la table des gossips"
+  task :migrate do
+    sh "rake db:migrate"
+  end
+end

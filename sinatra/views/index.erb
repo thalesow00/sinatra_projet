@@ -1,0 +1,14 @@
+<h1>Les Potins</h1>
+<ul>
+  <% @gossips.each do |gossip| %>
+    <li><a href="/gossips/<%= gossip.id %>"><%= gossip.author %> : <%= gossip.content %></a></li>
+  <% end %>
+</ul>
+<a href="/gossips/new">Ajouter un potin</a>
+<h1>Les Potins</h1>
+<ul>
+  <% @gossips.each do |gossip| %>
+    <li><a href="/gossips/<%= gossip.id %>"><%= gossip.author %> : <%= gossip.content %></a></li>
+  <% end %>
+</ul>
+<a href="/gossips/new">Ajouter un potin</a>

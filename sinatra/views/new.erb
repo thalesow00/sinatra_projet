@@ -1,0 +1,14 @@
+class View
+  def self.render(template, locals = {})
+    erb template.to_sym, locals: locals
+  end
+end
+
+<h1>Ajouter un potin</h1>
+<form action="/gossips/create" method="post">
+  <label>Auteur:</label>
+  <input type="text" name="author">
+  <label>Contenu:</label>
+  <textarea name="content"></textarea>
+  <button type="submit">Envoyer</button>
+</form>
